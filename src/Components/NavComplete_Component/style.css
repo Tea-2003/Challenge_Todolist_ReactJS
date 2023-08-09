@@ -1,0 +1,14 @@
+.navigation-completed{
+  width: 100%;
+  cursor: pointer;
+}
+.navigation-completed:hover{
+  background: gainsboro;
+
+}
+.completed{
+    color: #333;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+  }

@@ -5,7 +5,7 @@
     padding-bottom: 33px;
     
   }
-  .form input{
+.form input{
     width: 100%;
     padding: 19px 12px;
     border-radius: 12px;
@@ -13,8 +13,8 @@
     font-family: Montserrat;
     font-size: 14px;
     outline: none;
-  }
-  .btn{
+}
+.btn{
     padding: 18px 40px;
     border-radius: 12px;
     background: #2F80ED;
@@ -24,4 +24,4 @@
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-  }
+}

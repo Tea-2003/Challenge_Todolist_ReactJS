@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
+import './style.css';
 
-class Index extends Component {
+class index extends Component {
     render() {
         return (
-            <div className="completed">
-                Commpleted
+            <div className='navigation-completed'>
+                <div className="completed">
+                    Commpleted
+                </div>
             </div>
         );
     }
 }
 
-export default Index;
+export default index;
