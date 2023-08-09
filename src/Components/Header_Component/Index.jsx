@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import 'style.css'
 
-class Title extends Component {
+class Index extends Component {
     render() {
         return (
             <div className="todo">
@@ -10,4 +11,4 @@ class Title extends Component {
     }
 }
 
-export default Title;
+export default Index;

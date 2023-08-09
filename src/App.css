@@ -64,7 +64,7 @@ body{
   font-weight: 600;
 }
 
-.form{
+/* .form{
   width: 100%;
   display: flex;
   gap: 25px;
@@ -90,7 +90,7 @@ body{
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-}
+} */
 
 .show-text{
   display: flex;

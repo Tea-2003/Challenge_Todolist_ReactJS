@@ -1,0 +1,27 @@
+.form{
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    padding-bottom: 33px;
+    
+  }
+  .form input{
+    width: 100%;
+    padding: 19px 12px;
+    border-radius: 12px;
+    border: 1px solid #BDBDBD;
+    font-family: Montserrat;
+    font-size: 14px;
+    outline: none;
+  }
+  .btn{
+    padding: 18px 40px;
+    border-radius: 12px;
+    background: #2F80ED;
+    border: 1px ;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
