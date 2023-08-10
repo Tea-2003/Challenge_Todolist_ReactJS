@@ -1,14 +1,33 @@
-.navigation-completed{
+.navigation-completed {
   width: 100%;
+  padding: 16px 10%;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  text-align: center;
   cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
 }
-.navigation-completed:hover{
+.navigation-completed:hover {
   background: gainsboro;
-
 }
-.completed{
-    color: #333;
-    font-family: Montserrat, sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-  }
+.completed {
+  color: #333;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+.all::before {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: inline-block;
+  width: 50%;
+  height: 4px;
+  content: "";
+  background-color: #2f80ed;
+  border-radius: 4px 4px 0 0;
+  transform: translateX(-50%);
+}
