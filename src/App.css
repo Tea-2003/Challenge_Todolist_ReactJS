@@ -9,10 +9,6 @@ body {
   padding: 0 4%;
 }
 
-/* .header {
-  margin-bottom: 18px;
-} */
-
 .todo {
   margin: 32px 0 58px;
   font-family: Raleway, sans-serif;
@@ -27,26 +23,6 @@ body {
   text-align: center;
   cursor: pointer;
   border-bottom: 1px solid #bdbdbd;
-}
-
-.show-text {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.tick {
-  width: 24px;
-  height: 24px;
-  border-radius: 4px;
-  border: 1px solid var(--gray-3, #828282);
-  cursor: pointer;
-}
-
-.text {
-  font-family: Montserrat, sans-serif;
-  font-size: 14px;
-  font-weight: 600;
 }
 
 @media screen and (max-width: 768px) {

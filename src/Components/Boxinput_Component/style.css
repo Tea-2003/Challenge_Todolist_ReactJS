@@ -57,9 +57,8 @@
   top: 10px;
   right: 7px;
   cursor: pointer;
-  
 }
-.icon-delete path{
+.icon-delete path {
   fill: rgb(235, 87, 87);
 }
 .delete {
@@ -69,24 +68,24 @@
 }
 .icon-delete-btn {
   position: absolute;
-  top:  13px;
+  top: 13px;
   right: 105px;
   outline: rgb(255, 255, 255);
 }
-.icon-delete-btn path{
+.icon-delete-btn path {
   fill: #fff;
 }
 .delete-btn {
   display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Montserrat, sans-serif;
-    cursor: pointer;
-    border: none;
-    padding: 15px 35px;
-    font-size: 12px;
-    color: rgb(255, 255, 255);
-    box-shadow: rgba(127, 177, 243, 0.4) 0px 2px 6px;
-    background-color: rgb(235, 87, 87);
-    border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  font-family: Montserrat, sans-serif;
+  cursor: pointer;
+  border: none;
+  padding: 15px 35px;
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+  box-shadow: rgba(127, 177, 243, 0.4) 0px 2px 6px;
+  background-color: rgb(235, 87, 87);
+  border-radius: 4px;
 }
