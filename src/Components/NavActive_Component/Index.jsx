@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import './style.css';
+// import style from './NavActiveStyle.module.css'
+import './style.css'
 import React from 'react';
 
 const index = ({ setActiveTab, activeTab }) => {
