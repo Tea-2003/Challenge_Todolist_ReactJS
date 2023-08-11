@@ -1,8 +1,39 @@
-import React, { Component } from "react";
 import "./style.css";
+import React, { useState } from "react";
 
 
-const index = ({ activeTab }) => {
+
+const Index = ({ activeTab }) => {
+  const [inputValue, setInputValue] = useState("");
+  const [items, setItems] = useState([]);
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  const handleAddItem = () => {
+    if (inputValue.trim() !== "") {
+      setItems([...items, { text: inputValue, showTick: false }]);
+      setInputValue("");
+    }
+  };
+
+  const handleToggleTick = (index) => {
+    const newItems = [...items];
+    newItems[index].showTick = !newItems[index].showTick;
+    setItems(newItems);
+  };
+
+  const handleDeleteItem = (index) => {
+    const newItems = [...items];
+    newItems.splice(index, 1);
+    setItems(newItems);
+  };
+
+  const handleDeleteAllChecked = () => {
+    const newItems = items.filter((item) => !item.showTick);
+    setItems(newItems);
+  };
   return (
     <div className="main">
       {activeTab === "all" && (
@@ -13,17 +44,39 @@ const index = ({ activeTab }) => {
               id="month-input"
               className="form-control"
               placeholder="add details"
+              value={inputValue}
+              onChange={handleInputChange}
             />
-            <button className="btn">Add</button>
+            <button className="btn"  onClick={handleAddItem}>Add</button>
           </div>
-          <div className="result">
-            <div className="result-text">
-              <input type="checkbox" className="checkbox" />
-              <div className="text">Do coding challenges</div>
-            </div>
+
+          <div>
+            {items.map((item, index) => (
+              <div key={index} className="result">
+                <div className="result-text">
+                  <input type="checkbox" className="checkbox"
+                      onClick={() => handleToggleTick(index)} 
+                      {...item.showTick && (
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="1em"
+                          viewBox="0 0 448 512"
+                        >
+                          <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                        </svg>
+                      )}/>
+                  <div className={`text ${item.showTick ? "text" : ""}`}></div>
+                </div>
+              </div>
+              ))}
+                <div className="result">
+           <div className="result-text">
+           <input type="checkbox" className="checkbox" />
+             <div className="text">Do coding challenges</div>
+           </div>
+        </div>
           </div>
         </div>
-        
       )}
 
       {activeTab === "active" && (
@@ -75,7 +128,7 @@ const index = ({ activeTab }) => {
   );
 };
 
-export default index;
+export default Index;
 
 // const index = () => {
 //   return (
