@@ -13,12 +13,12 @@
 .navigation-completed:hover {
   background: gainsboro;
 }
-.completed {
+/* .completed {
   color: #333;
   font-family: Montserrat, sans-serif;
   font-size: 14px;
   font-weight: 600;
-}
+} */
 .all::before {
   position: absolute;
   bottom: 0;

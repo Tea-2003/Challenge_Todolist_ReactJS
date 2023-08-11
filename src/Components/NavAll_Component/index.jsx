@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const index = ({ setActiveTab,activeTab }) => {
     const isActive = activeTab === "all";
     return (
-      <div className={`navigation-all ${isActive ? "all" : ""}`}>
+      <div className={`navigation-all ${isActive ? "all" : ""}`} onClick={() => setActiveTab("all")}>
          <div className="all1">
-          <Link to="/" onClick={() => setActiveTab("all")}>
+          <Link to="/" >
           All
           </Link>
         </div>

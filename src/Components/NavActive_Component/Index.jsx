@@ -5,9 +5,9 @@ import React from 'react';
 const index = ({ setActiveTab, activeTab }) => {
     const isActive = activeTab === "active";
     return (
-        <div className="navigation-active">
+        <div className="navigation-active" onClick={() => setActiveTab("active")}>
             <div className={`active ${isActive ? "all" : ""}`}>
-                <Link to="/" onClick={() => setActiveTab("active")}>
+                <Link to="/" >
                 Active
                 </Link>
             </div>

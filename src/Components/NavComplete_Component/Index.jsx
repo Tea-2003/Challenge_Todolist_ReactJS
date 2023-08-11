@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const index = ({ setActiveTab, activeTab }) => {
   const isActive = activeTab === "completed";
   return (
-    <div className={`navigation-completed ${isActive ? "all" : ""}`}>
+    <div className={`navigation-completed ${isActive ? "all" : ""}`} onClick={() => setActiveTab("completed")}>
       <div className="completed">
-        <Link to="/" onClick={() => setActiveTab("completed")}>
+        <Link to="/" >
           Commpleted
         </Link>
       </div>

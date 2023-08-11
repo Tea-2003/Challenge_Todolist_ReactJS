@@ -1,6 +1,6 @@
 .navigation-all {
   width: 100%;
-  padding: 16px 12%;
+  padding: 14px 12%;
   font-family: Montserrat, sans-serif;
   font-size: 14px;
   font-weight: 600;
@@ -14,12 +14,12 @@
 .navigation-all:hover {
   background: gainsboro;
 }
-.all {
+/* .all {
   color: #333;
   font-family: Montserrat, sans-serif;
   font-size: 14px;
   font-weight: 600;
-}
+} */
 
 a {
   color: #333;

@@ -1,6 +1,6 @@
 .navigation-active {
   width: 100%;
-  padding: 16px 12%;
+  padding: 14px 12%;
   font-family: Montserrat, sans-serif;
   font-size: 14px;
   font-weight: 600;
@@ -14,12 +14,12 @@
 .navigation-active:hover {
   background: gainsboro;
 }
-.active {
+/* .active {
   color: #333;
   font-family: Montserrat, sans-serif;
   font-size: 14px;
   font-weight: 600;
-}
+} */
 
 .all::before {
   content: "";
