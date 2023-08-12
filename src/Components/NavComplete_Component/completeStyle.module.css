@@ -1,4 +1,4 @@
-.navigation-completed {
+.navigationCompleted {
   width: 100%;
   padding: 16px 10%;
   font-family: Montserrat, sans-serif;
@@ -10,23 +10,19 @@
   transition: background-color 0.3s;
   position: relative;
 }
-.navigation-completed:hover {
+
+.navigationCompleted:hover {
   background: gainsboro;
 }
-/* .completed {
-  color: #333;
-  font-family: Montserrat, sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-} */
-.all::before {
+
+.completed::before {
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
   display: inline-block;
   width: 50%;
   height: 4px;
-  content: "";
   background-color: #2f80ed;
   border-radius: 4px 4px 0 0;
   transform: translateX(-50%);

@@ -1,15 +1,14 @@
 import { Link } from 'react-router-dom';
-// import style from './NavActiveStyle.module.css'
-import './style.css'
+import style from './activeStyle.module.css'
 import React from 'react';
 
 const index = ({ setActiveTab, activeTab }) => {
     const isActive = activeTab === "active";
     return (
-        <div className="navigation-active" onClick={() => setActiveTab("active")}>
-            <div className={`active ${isActive ? "all" : ""}`}>
+        <div className={style.navigationActive} onClick={() => setActiveTab("active")}>
+            <div className={`active ${isActive ? style.active : ""}`}>
                 <Link to="/" >
-                Active
+                    Active
                 </Link>
             </div>
         </div>

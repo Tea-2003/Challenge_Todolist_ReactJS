@@ -20,7 +20,7 @@ body {
 .navigation {
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   cursor: pointer;
   border-bottom: 1px solid #bdbdbd;
 }

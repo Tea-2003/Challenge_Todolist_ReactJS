@@ -34,6 +34,7 @@
 .result {
   display: flex;
   position: relative;
+  padding: 4px 0;
 }
 
 .result-text {
@@ -48,6 +49,13 @@
   border-radius: 4px;
   border: 1px solid var(--gray-3, #828282);
   cursor: pointer;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.checkboxItem {
+  background: rgb(0, 102, 255);
 }
 
 .text {
@@ -56,13 +64,13 @@
   font-weight: 600;
 }
 
-.icon-checkbox::before{
-  background-color: rgb(0, 102, 255);
-  border-color: rgb(0, 102, 255);
+.textLine {
+  text-decoration-line: line-through;
 }
 
-
-
+.icon-checkbox {
+  fill: #fff;
+}
 
 .icon-delete {
   position: absolute;

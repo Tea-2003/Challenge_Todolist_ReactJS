@@ -60,11 +60,13 @@ const Index = ({ activeTab }) => {
             {items.map((item, index) => (
               <div key={index} className="result">
                 <div className="result-text">
-                  <input
-                    type="checkbox"
-                    className="checkbox"
+                  <div
+                    className={` checkbox  ${
+                      item.showTick ? "checkboxItem" : ""
+                    }`}
                     onClick={() => handleToggleCheck(index)}
-                    {...(item.showTick && (
+                  >
+                    {item.showTick && (
                       <svg
                         className="icon-checkbox"
                         xmlns="http://www.w3.org/2000/svg"
@@ -73,9 +75,9 @@ const Index = ({ activeTab }) => {
                       >
                         <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                       </svg>
-                    ))}
-                  />
-                  <div className={`text ${item.showTick ? "text-tick" : ""}`}>
+                    )}
+                  </div>
+                  <div className={`text ${item.showTick ? "textLine" : ""}`}>
                     {item.text}
                   </div>
                 </div>
@@ -103,29 +105,19 @@ const Index = ({ activeTab }) => {
           </div>
 
           <div>
-            {items.map((item, index) => (
-              <div key={index} className="result">
-                <div className="result-text">
-                  <input
-                    type="checkbox"
-                    className="checkbox"
-                    onClick={() => handleToggleCheck(index)}
-                    {...(item.showTick && (
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="1em"
-                        viewBox="0 0 448 512"
-                      >
-                        <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                      </svg>
-                    ))}
-                  />
-                  <div className={`text ${item.showTick ? "text-tick" : ""}`}>
-                    {item.text}
+            {items.map(
+              (item, index) =>
+                !item.showTick && (
+                  <div key={index} className="result">
+                    <div className="result-text">
+                      <div className="checkbox"></div>
+                      <div className={`text ${item.showTick ? "text" : ""}`}>
+                        {item.text}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            ))}
+                )
+            )}
           </div>
         </div>
       )}
@@ -137,25 +129,27 @@ const Index = ({ activeTab }) => {
               item.showTick && (
                 <div key={index} className="result">
                   <div className="result-text">
-                    <input
-                      type="checkbox"
-                      className="checkbox"
+                    <div
+                      className={` checkboxItem  ${
+                        item.showTick ? "checkbox" : ""
+                      }`}
                       onClick={() => handleToggleCheck(index)}
-                    />
-                    <svg
-                      className="icon-checkbox"
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="1em"
-                      viewBox="0 0 448 512"
                     >
-                      <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                    </svg>
+                      {item.showTick && (
+                        <svg
+                          className="icon-checkbox"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="1em"
+                          viewBox="0 0 448 512"
+                        >
+                          <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                        </svg>
+                      )}
+                    </div>
+                    <div className={`text ${item.showTick ? "textLine" : ""}`}>
+                      {item.text}
+                    </div>
                   </div>
-
-                  <div className={`text ${item.showTick ? "text-tick" : ""}`}>
-                    {item.text}
-                  </div>
-
                   <div className="icon-delete">
                     <svg
                       onClick={() => handleDeleteItem(index)}
