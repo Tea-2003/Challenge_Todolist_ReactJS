@@ -1,10 +1,10 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import React, { useState } from "react";
-import Boxinput_Component from "./Components/Boxinput_Component/index";
-import NavActive_Component from "./Components/NavActive_Component/index";
-import NavAll_Component from "./Components/NavAll_Component/index";
-import NavComplete_Component from "./Components/NavComplete_Component/index";
+import Boxinput from "./Components/Boxinput_Component";
+import NavActive from "./Components/NavActive_Component";
+import NavAll from "./Components/NavAll_Component";
+import NavComplete from "./Components/NavComplete_Component";
 
 const App = () => {
   const [activeTab, setActiveTab] = useState("all");
@@ -16,27 +16,15 @@ const App = () => {
           <div className="todo">#todo</div>
 
           <div className="navigation">
-            <NavAll_Component
-              setActiveTab={setActiveTab}
-              activeTab={activeTab}
-            />
-            <NavActive_Component
-              setActiveTab={setActiveTab}
-              activeTab={activeTab}
-            />
-            <NavComplete_Component
-              setActiveTab={setActiveTab}
-              activeTab={activeTab}
-            />
+            <NavAll setActiveTab={setActiveTab} activeTab={activeTab} />
+            <NavActive setActiveTab={setActiveTab} activeTab={activeTab} />
+            <NavComplete setActiveTab={setActiveTab} activeTab={activeTab} />
           </div>
           <Routes>
-            <Route
-              path="/"
-              element={<Boxinput_Component activeTab={activeTab} />}
-            />
+            <Route path="/" element={<Boxinput activeTab={activeTab} />} />
           </Routes>
         </div>
-        <Boxinput_Component />
+        <Boxinput />
       </div>
     </Router>
   );
